@@ -6,7 +6,7 @@
  * @datetime 2016-10-14 17:12
  */
 namespace Notadd\Wechat;
-use Notadd\Extension\Abstracts\ExtensionRegistrar;
+use Notadd\Foundation\Extension\Abstracts\ExtensionRegistrar;
 /**
  * Class Extension
  * @package Notadd\Wechat
@@ -15,13 +15,13 @@ class Extension extends ExtensionRegistrar {
     /**
      * @return string
      */
-    protected function getExtensionName() {
+    public function getExtensionName() {
         return 'notadd/wechat';
     }
     /**
      * @return string
      */
-    protected function getExtensionPath() {
+    public function getExtensionPath() {
         return realpath(__DIR__ . '/../');
     }
     /**
