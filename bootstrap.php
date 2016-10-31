@@ -5,4 +5,4 @@
  * @copyright (c) 2016, iBenchu.org
  * @datetime 2016-10-14 12:11
  */
-//return \Notadd\Wechat\Extension::class;
+return \Notadd\Wechat\Extension::class;
