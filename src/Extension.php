@@ -24,9 +24,4 @@ class Extension extends ExtensionRegistrar {
     public function getExtensionPath() {
         return realpath(__DIR__ . '/../');
     }
-    /**
-     * @return void
-     */
-    public function register() {
-    }
 }
