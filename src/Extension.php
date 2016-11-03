@@ -24,4 +24,16 @@ class Extension extends ExtensionRegistrar {
     public function getExtensionPath() {
         return realpath(__DIR__ . '/../');
     }
+    /**
+     * @return void
+     */
+    public function register() {
+        $this->alias('wechat', [
+            'EasyWeChat\Foundation\Application',
+            'Notadd\Wechat\WechatManager',
+        ]);
+        $this->container->singleton('wechat', function($application) {
+            return new WechatManager($application, $application['setting']);
+        });
+    }
 }
