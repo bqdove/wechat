@@ -1,38 +1,46 @@
 <?php
 /**
  * This file is part of Notadd.
+ *
  * @author TwilRoad <269044570@qq.com>
  * @copyright (c) 2016, iBenchu.org
  * @datetime 2016-10-14 17:12
  */
 namespace Notadd\Wechat;
+
 use Notadd\Foundation\Extension\Abstracts\ExtensionRegistrar;
+
 /**
- * Class Extension
- * @package Notadd\Wechat
+ * Class Extension.
  */
-class Extension extends ExtensionRegistrar {
+class Extension extends ExtensionRegistrar
+{
     /**
      * @return string
      */
-    public function getExtensionName() {
+    public function getExtensionName()
+    {
         return 'notadd/wechat';
     }
+
     /**
      * @return string
      */
-    public function getExtensionPath() {
+    public function getExtensionPath()
+    {
         return realpath(__DIR__ . '/../');
     }
+
     /**
      * @return void
      */
-    public function register() {
+    public function register()
+    {
         $this->alias('wechat', [
             'EasyWeChat\Foundation\Application',
             'Notadd\Wechat\WechatManager',
         ]);
-        $this->container->singleton('wechat', function($application) {
+        $this->container->singleton('wechat', function ($application) {
             return new WechatManager($application, $application['setting']);
         });
     }
