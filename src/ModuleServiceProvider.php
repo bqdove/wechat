@@ -13,7 +13,7 @@ use Notadd\Foundation\Extension\Abstracts\ExtensionRegistrar;
 /**
  * Class Extension.
  */
-class Extension extends ExtensionRegistrar
+class ModuleServiceProvider extends ExtensionRegistrar
 {
     /**
      * Info for extension.
