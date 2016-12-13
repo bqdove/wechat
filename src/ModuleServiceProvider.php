@@ -8,56 +8,23 @@
  */
 namespace Notadd\Wechat;
 
-use Notadd\Foundation\Extension\Abstracts\ExtensionRegistrar;
+use Illuminate\Support\ServiceProvider;
 
 /**
  * Class Extension.
  */
-class ModuleServiceProvider extends ExtensionRegistrar
+class ModuleServiceProvider extends ServiceProvider
 {
-    /**
-     * Info for extension.
-     *
-     * @return array
-     */
-    public function getExtensionInfo()
-    {
-        return [
-            'author'      => 'twilroad <269044570@qq.com>',
-            'description' => 'A module for Notadd',
-        ];
-    }
-
-    /**
-     * Name for extension.
-     *
-     * @return string
-     */
-    public function getExtensionName()
-    {
-        return 'notadd/wechat';
-    }
-
-    /**
-     * Path for extension.
-     *
-     * @return string
-     */
-    public function getExtensionPath()
-    {
-        return realpath(__DIR__ . '/../');
-    }
-
     /**
      * Extension's register.
      */
     public function register()
     {
-        $this->alias('wechat', [
+        $this->app->alias('wechat', [
             'EasyWeChat\Foundation\Application',
             'Notadd\Wechat\WechatManager',
         ]);
-        $this->container->singleton('wechat', function ($application) {
+        $this->app->singleton('wechat', function ($application) {
             return new WechatManager($application, $application['setting']);
         });
     }
