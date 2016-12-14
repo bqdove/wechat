@@ -21,6 +21,7 @@ class WechatManager extends Application
      * @var \Illuminate\Container\Container|\Notadd\Foundation\Application
      */
     protected $container;
+
     /**
      * @var \Notadd\Foundation\Setting\Contracts\SettingsRepository
      */
