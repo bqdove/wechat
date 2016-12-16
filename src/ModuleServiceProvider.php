@@ -20,10 +20,8 @@ class ModuleServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->alias('wechat', [
-            'EasyWeChat\Foundation\Application',
-            'Notadd\Wechat\WechatManager',
-        ]);
+        $this->app->alias('wechat', 'EasyWeChat\Foundation\Application');
+        $this->app->alias('wechat', 'Notadd\Wechat\WechatManager');
         $this->app->singleton('wechat', function ($application) {
             return new WechatManager($application, $application['setting']);
         });
