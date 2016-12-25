@@ -1,6 +1,6 @@
 {
     "name": "notadd/wechat",
-    "description": "The Notadd Module.",
+    "description": "Notadd's Wechat Module.",
     "keywords": ["notadd", "cms", "framework", "member"],
     "homepage": "https://notadd.com",
     "license": "Apache-2.0",
