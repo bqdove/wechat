@@ -1,6 +1,6 @@
 # Notadd Wechat
 
-Notadd Framework 的一个插件。
+Notadd Framework 的微信模块。
 
 ## 主要特性
 
