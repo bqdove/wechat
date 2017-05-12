@@ -1,3 +1,6 @@
+![Packagist](https://img.shields.io/packagist/v/notadd/wechat.svg) 
+![Downloads](https://img.shields.io/packagist/dt/notadd/wechat.svg)
+
 # Notadd Wechat
 
 Notadd Framework 的微信模块。
