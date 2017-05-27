@@ -8,9 +8,11 @@
  */
 namespace Notadd\Wechat;
 
+use Illuminate\Events\Dispatcher;
 use Notadd\Foundation\Module\Abstracts\Module;
 use Notadd\Wechat\Injections\Installer;
 use Notadd\Wechat\Injections\Uninstaller;
+use Notadd\Wechat\Listeners\PermissionTypeRegister;
 
 /**
  * Class Extension.
@@ -22,6 +24,7 @@ class ModuleServiceProvider extends Module
      */
     public function boot()
     {
+        $this->app->make(Dispatcher::class)->subscribe(PermissionTypeRegister::class);
     }
 
     /**
