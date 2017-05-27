@@ -17,6 +17,7 @@ use Notadd\Wechat\Listeners\PermissionGroupRegister;
 use Notadd\Wechat\Listeners\PermissionModuleRegister;
 use Notadd\Wechat\Listeners\PermissionRegister;
 use Notadd\Wechat\Listeners\PermissionTypeRegister;
+use Notadd\Wechat\Listeners\RouteRegister;
 
 /**
  * Class Extension.
@@ -33,6 +34,7 @@ class ModuleServiceProvider extends Module
         $this->app->make(Dispatcher::class)->subscribe(PermissionModuleRegister::class);
         $this->app->make(Dispatcher::class)->subscribe(PermissionRegister::class);
         $this->app->make(Dispatcher::class)->subscribe(PermissionTypeRegister::class);
+        $this->app->make(Dispatcher::class)->subscribe(RouteRegister::class);
     }
 
     /**
