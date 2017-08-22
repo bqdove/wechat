@@ -16,11 +16,17 @@
             "Notadd\\Wechat\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Notadd\\Wechat\\Tests\\": "tests/"
+        }
+    },
     "require": {
         "php": ">=7.0",
         "overtrue/wechat": "~3.1"
     },
     "require-dev": {
-        "notadd/installers": "0.1.*"
+        "notadd/installers": "0.5.*",
+        "phpunit/phpunit": "~5.7"
     }
 }
