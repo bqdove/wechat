@@ -1,0 +1,10 @@
+name: Wechat
+identification: notadd/wechat
+description: 'Wechat'
+author:
+    - twilroad
+    - 269044570@qq.com
+version: 0.1.0
+events:
+    subscribes:
+        - Notadd\Wechat\Listeners\RouteRegister
